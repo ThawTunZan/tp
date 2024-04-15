@@ -8,22 +8,22 @@ faster than your traditional GUI app.
 
 ### New Feature
 
-- Implemented `grade` Command [#40](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/40)).
+- Implemented `grade` Command (Pull request [#40](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/40)).
   - What it does: Allows user to input the grade attained for a module.
   - Justification: Past grades are an important consideration for students planning the modules to take in the future. 
   Implementing grades will also allow features related to grades to be used.
   - Highlights: This command does various validation before allowing grade to be changed. Command will not succeed if 
   module to be graded is in a future semester. Command will also check the module's Grading Basis and validate if the 
   - appropriate grade is inputted.
-- Implemented `gpa` Command [#40](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/40)).
+- Implemented `gpa` Command (Pull request [#40](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/40)).
   - What it does: Allows user to view their current GPA based on modules they have inputted a grade for.
   - Justification: GPA is important for tracking a student's performance.
-- Implemented `desiredgpa` Command [#86](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/86)).
+- Implemented `desiredgpa` Command (Pull request [#86](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/86)).
     - What it does: Shows user if their desired GPA is still attainable, and a combination of grades that they should 
   achieve is their desired GPA is feasible.
     - Justification: As GPA also plays a huge part in finding opportunities outside of NUS, students will be curious to 
   find out if their desired GPA is attainable, and the minimum results they will need if it is.
-- Implemented the `UI` Class [#24](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/24)).
+- Implemented the `UI` Class (Pull request [#24](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/24)).
   - What it does: Handles interactions with the user, both input and output.
   - Highlights: For inputs, blank spaces will be ignored.
 
