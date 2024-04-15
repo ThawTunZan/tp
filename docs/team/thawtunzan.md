@@ -1,29 +1,58 @@
-# Thaw Tun Zan - Project Portfolio Page
+# Thaw Tun Zan's Project Portfolio Page
 
-## Overview
+## Project: Future Academic Planner (FAP)
 
-Future Academic Planner (FAP) is a **robust academic management software** designed to help **streamline NUS Computer
-Engineering (CEG) student’s academic journey at NUS**. If you can type fast, FAP can get your module planning done
-faster than your traditional GUI app.
+### Overview
 
-### Code Contributed: [Reposense](https://nus-cs2113-ay2324s2.github.io/tp-dashboard/?search=Thaw&breakdown=true&sort=groupTitle%20dsc&sortWithin=title&since=2024-02-23&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=docs~functional-code~test-code~other)
+**Future Academic Planner (FAP)** is a robust academic management software designed to streamline the academic journey
+for NUS Computer Engineering (CEG) students. Optimized for those who can type fast, FAP gets your module planning done
+faster than traditional GUI applications.
 
-### Enhancements Implemented
 
- - Implemented `Module.java`
- - Implemented `ModuleList.java`
- - Implemented `AddCommand.java`
- - Implemented `JsonManager.java`
- - Created exception handling for Module class
- - Created exception handling for ModuleList class
- - Created exception handling for AddCommand.java
- - Created exception handling for JsonManager.java
+### Summary of Contributions
 
-### DG Contributions
+Given below are my contributions to the project.
 
-- Created implementation details of AddingModules
-- Created class diagrams for `Module.java`, `ModuleList.java`, `AddCommand.java` and `JsonManager.java`
-- Created sequence diagram for adding of module
-- Wrote appendix except for the testing part and User stories part
-- Added the `Module and ModuleList` part of the Design portion
-- Added the `Getting module details from Json File` part of implementation
+- **New Features**:
+    - **Implemented `Module.java`:** (Pull request [#25](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/25))
+        - **What it does:** Store the important attributes of a module
+        - **Justification:** This is important as it is the main item of concern.
+       
+    - **Implemented `ModuleList.java`:** (Pull request [#25](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/25))
+        - **What it does:** Manages the moduleList arrayList that contains the modules objects.
+        - **Justification:** Essential to handle how the modules get added and contained.
+
+    - **Implemented `AddCommand` command:**
+      (Pull request [#37](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/37))
+        - **What it does:** Determines whether the module should be added or not.
+        - **Justification:** Necessary to ensure there are no duplicates or problematic mods do not get added.
+
+    - **Implemented `JsonManager`:**
+      (Pull request [#63](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/63))
+        - **What it does:** Manages the logic of the json file
+        - **Justification:** Important for retrieving the necessary details from the son file
+
+- **Code contributed**: [Reposense](https://nus-cs2113-ay2324s2.github.io/tp-dashboard/?search=Thaw&breakdown=true&sort=groupTitle%20dsc&sortWithin=title&since=2024-02-23&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=docs~functional-code~test-code~other)
+
+
+- **Documentation**:
+    - **User Guide**:
+        - Added documentation.
+          (Pull request [#98](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/98)
+    - **Developer Guide**:
+        - Provided class diagrams and documentation for `Module.java` to enhance understanding of the codebase.
+          (Pull request [#181](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/181)
+        - Provided documentation for `JsonManager.java` to enhance understanding of the codebase.
+          (Pull request [#81](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/81))
+        - Provided sequence diagram and documentation for `Adding of module`, enhancing understanding and
+          maintainability of the code.
+          (Pull request [#169](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/169))
+        - Provided documentation for `Appendix` (Pull request [#178](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/178))
+
+    
+- **Contributions Beyond the Project Team**:
+    - Actively participated in inter-team reviews, debugging, providing insightful feedback and suggestions.
+    - Contributed to the Developer Guide by including a section for acknowledgments, thanking contributors and tools
+      that have facilitated the project's success.
+
+    

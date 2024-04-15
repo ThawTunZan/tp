@@ -43,7 +43,7 @@ Given below are my contributions to the project.
 - **Project management**:
   - Managed setup of GitHub team organization and repository configuration.
   - Maintained the issue tracker with high activity levels, linking pull requests to issues effectively.
-  - Managed version releases from `v1.0` and `v2.0`, including setting up release notes and ensuring systematic
+  - Managed version releases from `v1.0` to `v2.1`, including setting up release notes and ensuring systematic
     progression through versions.
 
 
