@@ -160,6 +160,13 @@ public class ModuleList {
         return moduleBySemMap;
     }
 
+    /**
+     * Checks if a module with the given module code exists in the list of CEG modules.
+     * This method determines existence based on direct match or equivalence with any CEG module.
+     *
+     * @param moduleCode The module code to search for.
+     * @return {@code true} if a module with the given code exists or equivalent CEGModules, {@code false} otherwise.
+     */
     public boolean containsCEGModuleInList(String moduleCode) {
         for (Module takenModule : moduleList) {
             ArrayList<String> equivalentList;
@@ -177,6 +184,12 @@ public class ModuleList {
         return false;
     }
 
+    /**
+     * Retrieves a list of CEG modules that are yet to be completed based on the modules already taken.
+     * This method identifies the missing modules needed for completion.
+     *
+     * @return An {@code ArrayList} containing the names of CEG modules that are yet to be completed.
+     */
     public ArrayList<String> getModulesToComplete() {
         ArrayList<String> modulesToComplete = new ArrayList<>();
         for (CEGModules cegModule : CEGModules.values()) {
@@ -242,7 +255,8 @@ public class ModuleList {
             upperBoundGradeNeeded += 1;
             mockGPA = calculateMockGPA(upperBound, upperBoundGradeNeeded, lowerBound, lowerBoundGradeNeeded);
         }
-        totalModuleCreditsCountedToGPA = moduleCreditsCountedToGPA + (lowerBoundGradeNeeded+upperBoundGradeNeeded) * 4;
+        totalModuleCreditsCountedToGPA = moduleCreditsCountedToGPA +
+                (lowerBoundGradeNeeded + upperBoundGradeNeeded) * 4;
         double acquiredGPA = (currentGPA * moduleCreditsCountedToGPA + mockGPA *
                 (4 * (upperBoundGradeNeeded + lowerBoundGradeNeeded))) / totalModuleCreditsCountedToGPA;
         Ui.printGradeExpectations(this, desiredGPA, acquiredGPA, upperBoundGradeNeeded,
@@ -277,9 +291,9 @@ public class ModuleList {
     /**
      * Calculates the mock GPA, which represents the GPA only from future modules
      *
-     * @param upperBound           The upper bound of the future average grade.
+     * @param upperBound            The upper bound of the future average grade.
      * @param upperBoundGradeNeeded The number of upper bound grades needed.
-     * @param lowerBound           The lower bound of the future average grade.
+     * @param lowerBound            The lower bound of the future average grade.
      * @param lowerBoundGradeNeeded The number of lower bound grades needed.
      * @return The calculated mock GPA.
      */

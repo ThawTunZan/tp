@@ -49,6 +49,13 @@ public enum CEGModules {
         return equivalent;
     }
 
+    /**
+     * Maps a module code string to its corresponding CEG module enumeration.
+     *
+     * @param moduleCode The module code string to map.
+     * @return The CEG module enumeration corresponding to the provided module code.
+     * @throws IllegalArgumentException if no matching module code is found in the CEGModules enumeration.
+     */
     public static CEGModules mapStringToEnum(String moduleCode) {
         for (CEGModules cegModule : CEGModules.values()) {
             if (cegModule.name().equalsIgnoreCase(moduleCode)) {

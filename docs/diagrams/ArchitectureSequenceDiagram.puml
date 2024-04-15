@@ -6,18 +6,14 @@ participant FAP as FAP <<class>>
 participant Storage as Storage <<class>>
 participant Ui as ":Ui"
 participant Parser as Parser <<class>>
-participant Command as ":Command"
-participant User as ":User"
-participant ModuleList as ":ModuleList"
 
 activate FAP
-
 loop until "Bye" Command
 
-FAP -> Ui: getUserInput()
+FAP -> Ui: get user input
 activate Ui
 
-Ui -> Student: Scanner
+Ui -> Student: scanner
 Student --> Ui: userInput
 Ui --> FAP: valid userInput
 
@@ -25,14 +21,21 @@ deactivate Ui
 
 FAP -> Parser: getCommand(userInput)
 activate Parser
+Parser -> ":Command"**: new
+activate ":Command"
+":Command" --> Parser:
+deactivate ":Command"
 Parser --> FAP: return command instance
 deactivate Parser
 
-FAP -> Command: execute(userInput)
-activate Command
-Command -> Command: do stuff
-Command --> FAP
-deactivate Command
+FAP -> ":Command": execute(userInput)
+activate ":Command"
+":Command" -> ":Command": do stuff
+":Command" --> FAP
+deactivate ":Command"
+
+participant User as ":User"
+participant ModuleList as ":ModuleList"
 
 FAP -> User: resetModuleStatus()
 activate User
@@ -44,6 +47,9 @@ User --> FAP
 deactivate User
 
 FAP -> Storage: saveModulesToFile(filePath)
+":Command" -> ":Command"
+destroy ":Command"
 end loop
+deactivate FAP
 
 @enduml

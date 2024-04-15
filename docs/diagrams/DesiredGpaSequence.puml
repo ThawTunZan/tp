@@ -3,7 +3,7 @@
 participant FAP <<Class>>
 participant DesiredGpaCommand as ":DesiredGpaCommand"
 participant moduleList as ":ModuleList"
-participant GradeCommandMetadata as ":GradeCommandMetadata"
+participant GradeCommandMetadata as ":DesiredGpaCommandMetadata"
 participant Ui as ":Ui"
 
 FAP -> DesiredGpaCommand: execute(userInput)

@@ -37,6 +37,18 @@ public class Ui {
         this.in = new Scanner(System.in);
     }
 
+    /**
+     * Prints the expected grades and GPA needed to achieve the desired GPA.
+     *
+     * @param moduleList            The ModuleList object containing the list of modules.
+     * @param desiredGPA            The desired GPA.
+     * @param acquiredGPA           The final GPA achieved by graduation with the expected grades.
+     * @param upperBoundGradeNeeded The number of upper bound grades needed.
+     * @param upperBound            The upper bound grade.
+     * @param lowerBoundGradeNeeded The number of lower bound grades needed.
+     * @param lowerBound            The lower bound grade.
+     * @param moduleCreditsNotTaken The remaining module credits to take.
+     */
     public static void printGradeExpectations(ModuleList moduleList, double desiredGPA, double acquiredGPA,
                                               int upperBoundGradeNeeded, double upperBound, int lowerBoundGradeNeeded,
                                               double lowerBound, float moduleCreditsNotTaken) {
@@ -57,7 +69,12 @@ public class Ui {
         in.close();
     }
 
-    public String getUserCommand() {
+    /**
+     * Retrieves user input from the console. Ignores input that are white spaces or comments
+     *
+     * @return The user input as a String.
+     */
+    public String getUserInput() {
         printHyphens();
         String currentLine = in.nextLine();
 
@@ -72,6 +89,12 @@ public class Ui {
         System.out.println(str);
     }
 
+    /**
+     * Determines whether the given line of input should be ignored.
+     *
+     * @param currentLine The line of input to be checked.
+     * @return True if the line should be ignored, false otherwise.
+     */
     private boolean shouldIgnore(String currentLine) {
         return currentLine.isBlank() || currentLine.trim().matches(COMMENT_LINE_FORMAT_REGEX);
     }
