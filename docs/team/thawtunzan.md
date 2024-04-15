@@ -38,10 +38,10 @@ Given below are my contributions to the project.
 - **Documentation**:
     - **User Guide**:
         - Added documentation.
-          (Pull request [#98](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/98)
+          (Pull request [#98](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/98))
     - **Developer Guide**:
         - Provided class diagrams and documentation for `Module.java` to enhance understanding of the codebase.
-          (Pull request [#181](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/181)
+          (Pull request [#181](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/181))
         - Provided documentation for `JsonManager.java` to enhance understanding of the codebase.
           (Pull request [#81](https://github.com/AY2324S2-CS2113-W14-3/tp/pull/81))
         - Provided sequence diagram and documentation for `Adding of module`, enhancing understanding and
