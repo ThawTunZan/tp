@@ -2,7 +2,7 @@
 
 [![Java CI](https://github.com/AY2324S2-CS2113T-W14-3/tp/actions/workflows/gradle.yml/badge.svg?branch=master)](https://github.com/AY2324S2-CS2113T-W14-3/tp/actions/workflows/gradle.yml)
 
-![Start Screen](images/Startscreen.png)
+![Ui](images/Ui.png)
 
 Future Academic Planner (FAP) is a robust academic management software designed to help streamline the academic journey 
 for NUS Computer Engineering (CEG) students. If you can type fast, FAP can get your module planning done faster than 

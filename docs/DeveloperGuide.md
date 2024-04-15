@@ -163,7 +163,7 @@ The `Ui` class retrieves input from the user and passes it on to the `Parser`.
 
 The `Command` class and its subclasses will call methods in Ui class for anything that needs to be printed.
 
-![Ui diagram](diagrams/Ui.png)
+![Ui diagram](diagrams/Ui_Class.png)
 
 ---
 ### User class
