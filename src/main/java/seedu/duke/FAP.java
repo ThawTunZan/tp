@@ -69,7 +69,7 @@ public class FAP {
 
         while (continueRunning) {
             try {
-                String userInput = ui.getUserCommand();
+                String userInput = ui.getUserInput();
                 LOGGER.log(Level.INFO, "User input: " + userInput);
                 Command command = Parser.getCommand(userInput);
                 command.execute(userInput);

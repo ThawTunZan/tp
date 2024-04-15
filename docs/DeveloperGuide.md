@@ -32,6 +32,8 @@
     - [Glossary](#glossary)
 - [Appendix: Instructions for manual testing](#instructions-for-manual-testing)
 
+<div style="page-break-after: always;"></div>
+
 ## Acknowledgements
 
 ---
@@ -68,6 +70,8 @@ information & module credits, which are crucial for planning academic modules ef
   available, which significantly enhances the functionality of academic applications like ours by providing reliable and
   up-to-date academic information.
 
+<div style="page-break-after: always;"></div>
+
 ## Design
 
 ---
@@ -101,6 +105,8 @@ its design focused on modularity, maintainability, and extensibility.
 The `runApplication` method encapsulates the application's runtime loop, processing user commands until an
 exit condition is met (either through an error or the 'bye' command). This method highlights the application of
 polymorphism (via the `Command` class) and encapsulation, detailing interactions with other components.
+
+<div style="page-break-after: always;"></div>
 
 ```java
 private static void runApplication() {
@@ -157,7 +163,7 @@ The `Ui` class retrieves input from the user and passes it on to the `Parser`.
 
 The `Command` class and its subclasses will call methods in Ui class for anything that needs to be printed.
 
-![Ui diagram](diagrams/Ui.png)
+![Ui diagram](diagrams/Ui_Class.png)
 
 ---
 ### User class
@@ -357,7 +363,7 @@ at least one whitespace character) is placed between the gaps of the regex patte
 While regex allows the `userInput` checks to be prudent, as well as potentially offering the flexibility for string
 inputs to allow a different order of arguments, there are limitations where it becomes hard to determine the exact
 error of the user's input solely based on the regular expressions, because it solely returns a true/false value
-if the string value itself fits the `regex` criteria given). Regardless, we think the use of regex in FAP can help provide
+if the string value itself fits the `regex` criteria given. Regardless, we think the use of regex in FAP can help provide
 us **safety in the arguments** that passes through to the commands via the userInput.
 
 **Developer usage FAP: Parser & CommandMetadata class as of `v2.1`**: **How to create a new command**
@@ -409,7 +415,7 @@ protected Command createCommandInstance(Map<String, String> args) {
 can now be both valid). This feature is still under testing.
 
 **Here is an extended developer usage guide:**
-- For every argument that can be optional, a new `String[]` has been introduced. This String[] should match the
+- For every argument that can be optional, a new `String[]` has been introduced. This `String[]` should match the
   length of the regular `String[]` containing the argument names. Each element in this new array should indicate whether
   the corresponding argument is optional or mandatory. For instance, if `courseCode` is mandatory, and `semester` is
   optional:
@@ -549,6 +555,7 @@ The following diagram illustrates how `ViewGraduateCommand` operates when its `e
 
 ![ViewGraduateCommand Sequence Diagram](diagrams/ViewGraduateCommand-0.png)
 
+---
 ### Adding a Module ###
 
 #### **Classes Involved:**
@@ -746,6 +753,7 @@ Below is the sequence diagram of the entire function:
 
 #### Target user profile
 
+Computer Engineering (CEG) Student at NUS
 + has a lot of modules to manage
 + need to calculate the gpa fast without having to go to the school website
 + is reasonably comfortable using CLI apps
@@ -795,6 +803,7 @@ Below is the sequence diagram of the entire function:
 + 2b. ModuleList finds a duplicate module
   + 2b1. ModuleAlreadyExistException is thrown
     
+
   Use case ends
 
 #### Use case: Deleting of a Module
@@ -802,6 +811,7 @@ Below is the sequence diagram of the entire function:
 2. ModuleList finds the module in its list
 3. Module is deleted
 4. savefile is updated
+
 
    Use case ends
 #### Extensions
@@ -820,6 +830,9 @@ Below is the sequence diagram of the entire function:
 ### Glossary
 
 + *JsonManager*: The class that manages the json file
++ *mainstream OS*: Windows, macOS, Linux
++ *regular expressions (regex)*: sequence of characters that defines a search pattern, used mainly for pattern matching 
+  within strings
 
 ## Instructions for manual testing
 
@@ -835,8 +848,8 @@ command will be explicitly stated. All provided test cases are assumed to be exe
     - [Modules to Graduate](#modules-to-graduate)
 - [Set Grade](#set-grade)
 - [GPA](#gpa)
-- [Desired GPA](#desired-gpa)
-- [Storage](#storage)
+- [Desired GPA](#check-desired-gpa)
+- [Storage](#test-storage)
 
 ---
 
@@ -1125,7 +1138,7 @@ command will be explicitly stated. All provided test cases are assumed to be exe
 
 ---
 
-### Desired GPA
+### Check Desired GPA
 
 1. Test Case: `desiredgpa 4.75`
 
@@ -1149,7 +1162,7 @@ command will be explicitly stated. All provided test cases are assumed to be exe
 
 ---
 
-### Storage
+### Test Storage
 
 1. Use `java -jar FAP.jar` to run the application
 2. Test Case: (The following test case requires multiple lines of inputs)

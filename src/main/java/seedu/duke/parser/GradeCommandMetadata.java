@@ -2,7 +2,6 @@ package seedu.duke.parser;
 
 import seedu.duke.command.Command;
 import seedu.duke.command.GradeCommand;
-import seedu.duke.exceptions.InvalidGpaException;
 
 import java.util.Map;
 
@@ -12,12 +11,6 @@ public class GradeCommandMetadata extends CommandMetadata {
 
     public GradeCommandMetadata() {
         super(GRADE_KEYWORD, GRADE_ARGUMENTS);
-    }
-
-    public static void validateGPA(double gpa) throws InvalidGpaException {
-        if (gpa > 5 || gpa <0) {
-            throw new InvalidGpaException("GPA must be within 0 to 5.");
-        }
     }
 
     // Grade Command Creator

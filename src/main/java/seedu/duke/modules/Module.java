@@ -54,17 +54,17 @@ public class Module {
     }
 
     /**
-     * Calculates the numeric value of the module grade.
+     * Gets the grade of the module.
      *
-     * @return The numeric value of the current module grade.
-     * @throws IllegalStateException If the module grade is unassigned or invalid.
+     * @return The grade of the module.
      */
     public String getModuleGrade() {
         return moduleGrade;
     }
 
     /**
-     * Sets the module grade after validating it against a set of allowed values.
+     * Sets the grade of the module. Throws an exception if moduleGrade is an invalid string, if a Graded mod is
+     * assigned with "CS", or if a CS/CU mod is assigned with a letter grade.
      *
      * @param moduleGrade The new grade to be set.
      * @throws ModuleException If the module is not taken yet or grading basis mismatch occurs.
@@ -111,6 +111,12 @@ public class Module {
         return moduleDate;
     }
 
+    /**
+     * Returns the numerical value of the grade based on the module grade.
+     *
+     * @return The numerical value of the grade.
+     * @throws IllegalStateException If the module grade is invalid or unassigned.
+     */
     public double getGradeNumber () {
         switch (moduleGrade) {
         case "A+":
@@ -140,6 +146,11 @@ public class Module {
         }
     }
 
+    /**
+     * Checks if the module has been assigned a grade, which is no if module grade is null.
+     *
+     * @return true if the module grade is null, false otherwise.
+     */
     public boolean gradeIsNull() {
         return moduleGrade == null;
     }
@@ -156,9 +167,5 @@ public class Module {
                 ", moduleGrade='" + moduleGrade + '\'' +
                 ", moduleMC='" + moduleMC + '\'' +
                 '}';
-    }
-
-    public boolean isGradedGradingBasis() {
-        return gradedGradingBasis;
     }
 }

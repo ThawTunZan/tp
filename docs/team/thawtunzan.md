@@ -23,3 +23,7 @@ faster than your traditional GUI app.
 
 - Created implementation details of AddingModules
 - Created class diagrams for `Module.java`, `ModuleList.java`, `AddCommand.java` and `JsonManager.java`
+- Created sequence diagram for adding of module
+- Wrote appendix except for the testing part and User stories part
+- Added the `Module and ModuleList` part of the Design portion
+- Added the `Getting module details from Json File` part of implementation
